@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!--
+    日文自習小幫手 — 品牌圖示「自習之星」（Apple 設計語言版）
+    外型：Apple 式連續曲率圓角——圓角 22.37%、轉角平滑 60%（與 Figma corner smoothing 相同演算法）。
+    材質：Apple 系統灰石墨漸層底（#48484A → #1C1C1E）、頂緣細高光；
+          白色符號帶極淡垂直漸層與柔和投影，營造浮起的層次。
+    符號：四芒星（四分之一圓弧構成）＋星心播放三角＋右上小星。
+    響應式：≤ 32px（瀏覽器頁籤）只保留置中主星並移除投影，確保小尺寸銳利。
+  -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#48484a" />
+      <stop offset="1" stop-color="#1c1c1e" />
+    </linearGradient>
+    <linearGradient id="glyph" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#e5e5ea" />
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.28" />
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="lift" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.6" flood-color="#000" flood-opacity="0.45" />
+    </filter>
+    <path
+      id="squircle"
+      d="M41.09 0c8.02 0 12.03 0 15.09 1.56a14.32 14.32 0 0 1 6.26 6.26c1.56 3.06 1.56 7.07 1.56 15.09L64 41.09c0 8.02 0 12.03 -1.56 15.09a14.32 14.32 0 0 1 -6.26 6.26c-3.06 1.56 -7.07 1.56 -15.09 1.56L22.91 64c-8.02 0 -12.03 0 -15.09 -1.56a14.32 14.32 0 0 1 -6.26 -6.26c-1.56 -3.06 -1.56 -7.07 -1.56 -15.09L0 22.91c0 -8.02 0 -12.03 1.56 -15.09a14.32 14.32 0 0 1 6.26 -6.26c3.06 -1.56 7.07 -1.56 15.09 -1.56Z"
+    />
+  </defs>
+
+  <style>
+    .compact { display: none; }
+    @media (max-width: 32px) {
+      .full { display: none; }
+      .compact { display: inline; }
+    }
+  </style>
+
+  <use href="#squircle" fill="url(#tile)" />
+  <!-- 頂緣高光：沿外框內側、由上往下淡出 -->
+  <path
+    d="M40.95 0.5c7.89 0 11.84 0 14.85 1.54a14.09 14.09 0 0 1 6.16 6.16c1.54 3.01 1.54 6.96 1.54 14.85L63.5 40.95c0 7.89 0 11.84 -1.54 14.85a14.09 14.09 0 0 1 -6.16 6.16c-3.01 1.54 -6.96 1.54 -14.85 1.54L23.05 63.5c-7.89 0 -11.84 0 -14.85 -1.54a14.09 14.09 0 0 1 -6.16 -6.16c-1.54 -3.01 -1.54 -6.96 -1.54 -14.85L0.5 23.05c0 -7.89 0 -11.84 1.54 -14.85a14.09 14.09 0 0 1 6.16 -6.16c3.01 -1.54 6.96 -1.54 14.85 -1.54Z"
+    fill="none"
+    stroke="url(#rim)"
+    stroke-width="1"
+  />
+
+  <g class="full" fill="url(#glyph)" filter="url(#lift)">
+    <path
+      fill-rule="evenodd"
+      d="M30 13A21 21 0 0 0 51 34A21 21 0 0 0 30 55A21 21 0 0 0 9 34A21 21 0 0 0 30 13Z
+         M28.5 30v8l7-4Z"
+    />
+    <path d="M50 8A6 6 0 0 0 56 14A6 6 0 0 0 50 20A6 6 0 0 0 44 14A6 6 0 0 0 50 8Z" />
+  </g>
+
+  <g class="compact" fill="#fff">
+    <path d="M32 9A23 23 0 0 0 55 32A23 23 0 0 0 32 55A23 23 0 0 0 9 32A23 23 0 0 0 32 9Z" />
+  </g>
+</svg>
